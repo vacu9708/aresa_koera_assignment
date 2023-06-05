@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS future_price (
 - Partial dependency, transitive dependency 모두 없어므로 제3 정규화된 table임.
 #### primary key에 indexing 자동 적용
 - selectivity = cardinality / row 숫자 = 1 -> 선택도가 높음
-- 아파트 시세의 업데이트 속도보다 읽기 작업이 더 많을 것이므로 indexing이 더 유리함
+- 아파트 ID는 거의 바뀌지 않으므로 indexing이 유리함
 
 ### Frontend, Backend 설치 command
 
