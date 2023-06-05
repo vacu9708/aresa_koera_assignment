@@ -19,7 +19,7 @@ CREATE DATABASE Real_estate_price;
 USE Real_estate_price;
 
 CREATE TABLE IF NOT EXISTS historical_price (
-	aptId INT PRIMARY KEY,
+    aptId INT PRIMARY KEY,
     year INT,
     month INT
 );
@@ -30,13 +30,16 @@ CREATE TABLE IF NOT EXISTS future_price (
     month INT
 );  
 ~~~
-![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/24bb028e-4f22-46ac-a59f-25a3e9217489)
+- Partial dependency, transitive dependency 모두 없어므로 제3 정규화된 table임.
+#### primary key에 indexing 자동 적용
+- selectivity = cardinality / row 숫자 = 1 -> 선택도가 높음
+- 아파트 시세의 업데이트 속도보다 읽기 작업이 더 많을 것이므로 indexing이 더 유리함
 
 ### Frontend, Backend 설치 command
 
-# 서비스 실행 방식
 ### Frontend, Backend 실행 command
-# 예제 실행 Step 별 화면 변경사항
+
+## 예제 실행 Step 별 화면 변경사항
 ### DB 에 아무 정보 없을 때 화면
 
 ### POST historical_price 에 임의의 값 post
