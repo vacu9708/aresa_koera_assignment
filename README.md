@@ -5,11 +5,11 @@
 
 # 개발 환경 세팅 방식
 ### Database 설치 과정
+![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/9e121753-2e5b-4c8c-8876-40c19d6f3eee)
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/5d436d73-d310-4ea4-ac21-9aff32c794ce)
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/d4df3e94-ef59-473e-abae-67426bafb541)
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/10ac2571-f7ac-4f25-b611-7cda2ee76f6f)
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/a6b9f808-31ed-4b51-955f-34a59ddc1e43)
-![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/9e121753-2e5b-4c8c-8876-40c19d6f3eee)
 Installer의 지시를 따라서 설치 완료 후 DB 접속<br>
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/70b70c30-c9ba-413f-980c-a5fb33895051)
 
