@@ -4,19 +4,19 @@
 ---
 
 # 개발 환경 세팅 방식
-- ### Database 설치 과정 기술
-- ### Frontend 설치 command
-- ### Backend 설치 command
+- ### Database 설치 과정
+
+- ### Frontend, Backend 설치 command
 - ### Database 테이블 생성 sql
 # 서비스 실행 방식
-- ### Frontend 실행 command
-- ### Backend 실행 command
+- ### Frontend, Backend 실행 command
 # 예제 실행 Step 별 화면 변경사항
 - ### DB 에 아무 정보 없을 때 화면
+
 - ### POST historical_price 에 임의의 값 post
   #### post curl 커멘드:
   #### post 이후 새로고침 화면:
-- ### POST futurel_price 에 임의의 값 post
+- ### POST future_price 에 임의의 값 post
   #### post curl 커멘드:
   #### post 이후 새로고침 화면:
  
