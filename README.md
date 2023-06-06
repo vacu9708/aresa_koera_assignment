@@ -10,25 +10,22 @@
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/d4df3e94-ef59-473e-abae-67426bafb541)
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/10ac2571-f7ac-4f25-b611-7cda2ee76f6f)
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/a6b9f808-31ed-4b51-955f-34a59ddc1e43)
-Installer의 지시를 따라서 설치 완료 후 DB 접속<br>
+
+비밀번호는 123으로 설정, Installer의 지시를 따라서 설치 완료 후 DB 접속<br>
 ![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/70b70c30-c9ba-413f-980c-a5fb33895051)
 
 ### Database 테이블 생성 SQL
+
 ~~~sql
-CREATE DATABASE Real_estate_price;
-USE Real_estate_price;
+CREATE DATABASE real_estate_price;
+
+USE real_estate_price;
 
 CREATE TABLE IF NOT EXISTS historical_price (
-    aptId INT PRIMARY KEY,
-    year INT,
-    month INT
+	aptId INT PRIMARY KEY,
+    date DATE,
+    value INT not null
 );
-
-CREATE TABLE IF NOT EXISTS future_price (
-    aptId INT PRIMARY KEY,
-    year INT,
-    month INT
-);  
 ~~~
 - Partial dependency, transitive dependency 모두 없어므로 제3 정규화된 table임.
 #### primary key에 indexing 자동 적용
