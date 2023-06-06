@@ -17,32 +17,38 @@
 ### Database 테이블 생성 SQL
 
 ~~~sql
-CREATE DATABASE real_estate_price;
-
-USE real_estate_price;
-
-CREATE TABLE IF NOT EXISTS historical_price (
-	aptId INT PRIMARY KEY,
-    date DATE,
-    value INT not null
+CREATE DATABASE real_estate;
+USE real_estate;
+CREATE TABLE IF NOT EXISTS price (
+  aptId INT NOT NULL,
+  date DATE NOT NULL,
+  value INT NOT NULL,
+  PRIMARY KEY(aptId, date)
 );
 ~~~
 - Partial dependency, transitive dependency 모두 없어므로 제3 정규화된 table임.
-#### primary key에 indexing 자동 적용
-- selectivity = cardinality / row 숫자 = 1 -> 선택도가 높음
-- 아파트 ID는 거의 바뀌지 않으므로 indexing이 유리함
+- aptId와 date를 primary key로 설
 
 ### Frontend, Backend 설치 command
-
+install.bat 실행
 ### Frontend, Backend 실행 command
+execute.bat 실행
 
 ## 예제 실행 Step 별 화면 변경사항
 ### DB 에 아무 정보 없을 때 화면
+Example: http://localhost:3000/aresa-api/historical_price?aptId=1&year=2023&monthStart=1&monthEnd=2<br>
 
 ### POST historical_price 에 임의의 값 post
 #### post curl 커멘드:
+~~~
+curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 1, \"values\": [10, 20, 30, 40] }" http://localhost:3000/aresa-api/historical_price
+~~~
 #### post 이후 새로고침 화면:
+
 ### POST future_price 에 임의의 값 post
 #### post curl 커멘드:
+~~~
+curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 5, \"values\": [60, 70, 80, 90] }" http://localhost:3000/aresa-api/future_price
+~~~
 #### post 이후 새로고침 화면:
  
