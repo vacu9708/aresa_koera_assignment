@@ -1,11 +1,11 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, Column, PrimaryColumn } from 'typeorm';
 
 @Entity()
 export class Price {
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn()
   aptId: number;
 
-  @Column({ type: 'date' })
+  @PrimaryColumn({ type: 'date' })
   date: Date;
 
   @Column()

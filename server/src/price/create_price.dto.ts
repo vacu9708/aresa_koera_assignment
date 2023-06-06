@@ -1,9 +1,16 @@
-import { IsDefined, IsNotEmpty, IsNumber, MinLength } from 'class-validator';
+import { IsNotEmpty, IsNumber } from 'class-validator';
 
 export class CreatePriceDto {
-  @IsDefined()
   @IsNotEmpty()
   @IsNumber()
-  @MinLength(2)
-  readonly value: number;
+  readonly aptId: number;
+  @IsNotEmpty()
+  @IsNumber()
+  readonly year: number;
+  @IsNotEmpty()
+  @IsNumber()
+  readonly monthStart: number;
+  @IsNotEmpty()
+  @IsNumber()
+  readonly values: number[];
 }
