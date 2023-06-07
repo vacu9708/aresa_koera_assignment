@@ -32,11 +32,11 @@ CREATE TABLE IF NOT EXISTS price (
 ### Frontend, Backend 설치 command
 install.bat 실행
 ### Frontend, Backend 실행 command
-execute_frontend.bat, execute_backend 실행
+execute_frontend.bat, execute_backend.bat 실행
 
 ## 예제 실행 Step 별 화면 변경사항
 ### DB 에 아무 정보 없을 때 화면
-![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/3d0a77ab-ab0f-4b6a-b0c8-e926950de0e2)
+![image](https://github.com/vacu9708/nestjs_assignment_before_interview/assets/67142421/f25f6f91-0661-4f16-9ca4-d6f3af91b95f)
 
 ### POST historical_price 에 임의의 값 post
 #### post curl 커멘드:
