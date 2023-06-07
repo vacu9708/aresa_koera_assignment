@@ -18,6 +18,7 @@
         const historical_prices = (await axios.get(`http://localhost:3001/aresa-api/historical_price?aptId=1&year=2023&monthStart=${historical_monthStart}&monthEnd=5`)).data
         let future_monthStart = 6
         const future_prices = (await axios.get(`http://localhost:3001/aresa-api/future_price?aptId=1&year=2023&monthStart=${future_monthStart}&monthEnd=12`)).data
+        const link_line = [future_prices[0]]
         new Chart(
             document.getElementById('prices'),
             {
@@ -27,7 +28,7 @@
                     datasets: [
                         {
                             label: ['Historical price'],
-                            data: [...new Array(historical_monthStart - 1), ...historical_prices, ...[(future_prices[0])]],
+                            data: [...new Array(historical_monthStart - 1), ...historical_prices, ...link_line],
                             borderColor: 'blue'
                         },
                         {
