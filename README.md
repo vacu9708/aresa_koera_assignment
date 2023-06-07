@@ -44,7 +44,7 @@ execute_frontend.bat, execute_backend 실행
 curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 1, \"values\": [10, 20, 30, 40, 50] }" http://localhost:3001/aresa-api/historical_price
 ~~~
 #### post 이후 새로고침 화면:
-![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/808ecb82-cd38-4f11-90d1-401ca671dd79)
+![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/0a3818f4-b6b4-453b-b47f-04ad25bde8aa)
 
 ### POST future_price 에 임의의 값 post
 #### post curl 커멘드:
@@ -52,4 +52,4 @@ curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2
 curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 6, \"values\": [70, 80, 60, 50, 40, 30, 20] }" http://localhost:3001/aresa-api/future_price
 ~~~
 #### post 이후 새로고침 화면:
-![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/ce7607b6-490f-45b6-99f9-0fb9c81a4e16)
+![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/128c9b98-63fe-481b-b986-2ef013e233ba)
