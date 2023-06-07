@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS price (
   PRIMARY KEY(aptId, date)
 );
 ~~~
-- Partial dependency, transitive dependency 모두 없어므로 제3 정규화된 table임.
+- Partial dependency, transitive dependency 모두 없으므로 제3 정규화된 table임.
 - aptId와 date를 primary key로 설정
 
 ### Frontend, Backend 설치 command
