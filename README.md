@@ -36,19 +36,19 @@ execute.bat 실행
 
 ## 예제 실행 Step 별 화면 변경사항
 ### DB 에 아무 정보 없을 때 화면
-Example: http://localhost:3000/aresa-api/historical_price?aptId=1&year=2023&monthStart=1&monthEnd=2<br>
+Example: http://localhost:3001/aresa-api/historical_price?aptId=1&year=2023&monthStart=1&monthEnd=3<br>
 
 ### POST historical_price 에 임의의 값 post
 #### post curl 커멘드:
 ~~~
-curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 1, \"values\": [10, 20, 30, 40] }" http://localhost:3000/aresa-api/historical_price
+curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 1, \"values\": [10, 20, 30, 40] }" http://localhost:3001/aresa-api/historical_price
 ~~~
 #### post 이후 새로고침 화면:
 
 ### POST future_price 에 임의의 값 post
 #### post curl 커멘드:
 ~~~
-curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 5, \"values\": [60, 70, 80, 90] }" http://localhost:3000/aresa-api/future_price
+curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 5, \"values\": [60, 70, 80, 90] }" http://localhost:3001/aresa-api/future_price
 ~~~
 #### post 이후 새로고침 화면:
  
