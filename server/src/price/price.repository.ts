@@ -12,6 +12,7 @@ export class PriceRepository {
       SELECT value
       FROM price
       WHERE aptId = ? AND date >= ? AND date <= ?
+      ORDER BY date
     `;
     try {
       return await this.repo.query(query, [aptId, startDate, endDate]);
