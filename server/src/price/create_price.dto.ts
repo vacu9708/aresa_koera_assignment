@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNumber } from 'class-validator';
+import { IsNotEmpty, IsNumber, Min, Max } from 'class-validator';
 
 export class CreatePriceDto {
   @IsNotEmpty()
@@ -6,11 +6,14 @@ export class CreatePriceDto {
   readonly aptId: number;
   @IsNotEmpty()
   @IsNumber()
+  @Min(0)
   readonly year: number;
   @IsNotEmpty()
   @IsNumber()
+  @Min(1)
+  @Max(12)
   readonly monthStart: number;
   @IsNotEmpty()
-  @IsNumber()
+  @Min(0)
   readonly values: number[];
 }

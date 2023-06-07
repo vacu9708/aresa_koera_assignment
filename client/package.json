@@ -11,8 +11,7 @@
     "axios": "^1.4.0",
     "chart.js": "^4.3.0",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
-    "vue-chartjs": "^5.2.0"
+    "vue": "^3.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -35,7 +34,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",

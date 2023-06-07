@@ -38,20 +38,15 @@ export class PriceController {
     return this.priceService.setHistoricalPrice(reqBody);
   }
 
-  @Get('aresa-api/historical_price')
+  @Get('aresa-api/future_price')
   //@UseInterceptors(ClassSerializerInterceptor) // converts javascript object into json for the response
   getFuturePrice(
-    @Query('aptId') aptId: number,
-    @Query('year') year: number,
-    @Query('monthStart') monthStart: number,
-    @Query('monthEnd') monthEnd: number,
+    @Query('aptId', ParseIntPipe) aptId: number,
+    @Query('year', ParseIntPipe) year: number,
+    @Query('monthStart', ParseIntPipe) monthStart: number,
+    @Query('monthEnd', ParseIntPipe) monthEnd: number,
   ): Promise<Price[]> {
-    return this.priceService.getHistoricalPrice(
-      aptId,
-      year,
-      monthStart,
-      monthEnd,
-    );
+    return this.priceService.getFuturePrice(aptId, year, monthStart, monthEnd);
   }
 
   @Post('aresa-api/future_price')
