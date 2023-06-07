@@ -7,6 +7,7 @@ import {
   Body,
   Param,
   Query,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { PriceService } from './price.service';
 import { CreatePriceDto } from './create_price.dto';
@@ -19,10 +20,10 @@ export class PriceController {
   @Get('aresa-api/historical_price')
   //@UseInterceptors(ClassSerializerInterceptor) // converts javascript object into json for the response
   getHistoricalPrice(
-    @Query('aptId') aptId: number,
-    @Query('year') year: number,
-    @Query('monthStart') monthStart: number,
-    @Query('monthEnd') monthEnd: number,
+    @Query('aptId', ParseIntPipe) aptId: number,
+    @Query('year', ParseIntPipe) year: number,
+    @Query('monthStart', ParseIntPipe) monthStart: number,
+    @Query('monthEnd', ParseIntPipe) monthEnd: number,
   ): Promise<Price[]> {
     return this.priceService.getHistoricalPrice(
       aptId,

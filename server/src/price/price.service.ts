@@ -25,7 +25,9 @@ export class PriceService {
       throw new BadRequestException('Only past info allowed');
     }
     // 범위 검색
-    return await this.priceRepository.findRange(aptId, startDate, endDate);
+    return (
+      await this.priceRepository.findRange(aptId, startDate, endDate)
+    ).map((pair) => pair.value);
   }
 
   async setHistoricalPrice(reqBody: CreatePriceDto): Promise<boolean> {
@@ -70,7 +72,9 @@ export class PriceService {
       throw new BadRequestException('Only future info allowed');
     }
     // 범위 검색
-    return await this.priceRepository.findRange(aptId, startDate, endDate);
+    return (
+      await this.priceRepository.findRange(aptId, startDate, endDate)
+    ).map((pair) => pair.value);
   }
 
   async setFuturePrice(reqBody: CreatePriceDto): Promise<boolean> {
