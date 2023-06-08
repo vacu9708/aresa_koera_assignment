@@ -26,17 +26,17 @@ CREATE TABLE IF NOT EXISTS price (
   PRIMARY KEY(aptId, date)
 );
 ~~~
-- Partial dependency, transitive dependency 모두 없어므로 제3 정규화된 table임.
-- aptId와 date를 primary key로 설
+- Partial dependency, transitive dependency 모두 없으므로 제3 정규화된 table임.
+- aptId와 date를 primary key로 설정
 
 ### Frontend, Backend 설치 command
 install.bat 실행
 ### Frontend, Backend 실행 command
-execute_frontend.bat, execute_backend 실행
+execute_frontend.bat, execute_backend.bat 실행
 
 ## 예제 실행 Step 별 화면 변경사항
 ### DB 에 아무 정보 없을 때 화면
-![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/3d0a77ab-ab0f-4b6a-b0c8-e926950de0e2)
+![image](https://github.com/vacu9708/nestjs_assignment_before_interview/assets/67142421/f25f6f91-0661-4f16-9ca4-d6f3af91b95f)
 
 ### POST historical_price 에 임의의 값 post
 #### post curl 커멘드:
@@ -44,7 +44,7 @@ execute_frontend.bat, execute_backend 실행
 curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 1, \"values\": [10, 20, 30, 40, 50] }" http://localhost:3001/aresa-api/historical_price
 ~~~
 #### post 이후 새로고침 화면:
-![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/808ecb82-cd38-4f11-90d1-401ca671dd79)
+![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/0a3818f4-b6b4-453b-b47f-04ad25bde8aa)
 
 ### POST future_price 에 임의의 값 post
 #### post curl 커멘드:
@@ -52,4 +52,4 @@ curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2
 curl -X POST -H "Content-Type: application/json" -d "{ \"aptId\": 1, \"year\": 2023, \"monthStart\": 6, \"values\": [70, 80, 60, 50, 40, 30, 20] }" http://localhost:3001/aresa-api/future_price
 ~~~
 #### post 이후 새로고침 화면:
-![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/ce7607b6-490f-45b6-99f9-0fb9c81a4e16)
+![image](https://github.com/vacu9708/aresa_korea_assignment/assets/67142421/128c9b98-63fe-481b-b986-2ef013e233ba)
